@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "outDir": ".tmp/evidence",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "jsx": "react-native"
+  },
+  "include": [
+    "scripts/evidence/**/*.ts",
+    "src/config/index.ts",
+    "src/database/types.ts",
+    "src/features/scanner/addressParser.ts",
+    "src/features/routing/geoUtils.ts",
+    "src/features/routing/directionsService.ts",
+    "src/features/routing/roadMatrixService.ts",
+    "src/features/routing/tspSolver.ts",
+    "src/features/routing/roadRouteOptimizer.ts"
+  ]
+}

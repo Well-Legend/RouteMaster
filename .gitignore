@@ -8,9 +8,11 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
+.tmp/
 
 # Native
 .kotlin/
+*.keystore
 *.orig.*
 *.jks
 *.p8
@@ -30,12 +32,21 @@ yarn-error.*
 .DS_Store
 *.pem
 
+# local IDE / AI workflow files
+.idea/
+localhost
+
 # local env files
+.env
 .env*.local
 
 # typescript
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# committed Android native project: keep only local-only Android files ignored
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/app/.cxx/

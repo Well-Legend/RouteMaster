@@ -1,0 +1,4 @@
+interface:
+  display_name: "RouteMaster Architecture"
+  short_description: "RouteMaster 專案架構、資料流與開發入口指引"
+  default_prompt: "Use $routemaster-architecture to ground RouteMaster tasks in the current app structure, data flow, and development constraints."

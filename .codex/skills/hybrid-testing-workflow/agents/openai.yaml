@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hybrid Testing Workflow"
+  short_description: "強制開發測試閘門（後端自測、前端手測）"
+  default_prompt: "Use $hybrid-testing-workflow to enforce test gates before moving to the next development task."

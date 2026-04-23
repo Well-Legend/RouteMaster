@@ -1,22 +1,67 @@
 {
   "name": "routemaster",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "web": "expo start --web",
+    "evidence:build": "node_modules/.bin/tsc -p tsconfig.evidence.json --pretty false",
+    "evidence:verify-scanner": "npm run evidence:build && node .tmp/evidence/scripts/evidence/verify_scanner.js",
+    "evidence:verify-routing": "npm run evidence:build && node .tmp/evidence/scripts/evidence/verify_routing.js",
+    "evidence:verify-release": "npm run evidence:build && node .tmp/evidence/scripts/evidence/verify_release_readiness.js",
+    "evidence:verify": "npm run evidence:verify-scanner && npm run evidence:verify-routing && npm run evidence:verify-release"
   },
   "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
+    "@gorhom/bottom-sheet": "^5.2.8",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-google-signin/google-signin": "^13.3.0",
+    "@react-native-ml-kit/text-recognition": "^2.0.0",
+    "@shopify/react-native-skia": "^2.4.21",
+    "@supabase/supabase-js": "^2.57.4",
+    "@turf/helpers": "^7.3.4",
+    "@turf/union": "^7.3.4",
     "expo": "~54.0.32",
+    "expo-blur": "~15.0.8",
+    "expo-camera": "~17.0.8",
+    "expo-constants": "~18.0.13",
+    "expo-dev-client": "~6.0.20",
+    "expo-image-manipulator": "~14.0.7",
+    "expo-image-picker": "~17.0.10",
+    "expo-linear-gradient": "~15.0.8",
+    "expo-linking": "~8.0.11",
+    "expo-location": "~19.0.8",
+    "expo-router": "~6.0.22",
+    "expo-sqlite": "~16.0.10",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-draggable-flatlist": "^4.0.3",
+    "react-native-gesture-handler": "~2.28.0",
+    "react-native-get-random-values": "^2.0.0",
+    "react-native-maps": "1.20.1",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-sortables": "^1.9.4",
+    "react-native-svg": "^15.12.1",
+    "react-native-worklets": "^0.7.2",
+    "react-native-worklets-core": "^1.6.2",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.28.6",
+    "@nozbe/watermelondb": "^0.28.0",
     "@types/react": "~19.1.0",
+    "@types/uuid": "^10.0.0",
+    "babel-preset-expo": "^54.0.10",
     "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "private": true
 }
